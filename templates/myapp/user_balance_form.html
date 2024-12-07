@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Balance Graph</title>
+</head>
+<body>
+    <h2>Enter User ID to Generate Balance Graph</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Generate Graph</button>
+    </form>
+</body>
+</html>

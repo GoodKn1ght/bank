@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Виписка користувача</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f9fc;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table thead {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        table th, table td {
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        table tr:hover {
+            background-color: #eaf7e4;
+        }
+
+        footer {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Виписка користувача</h1>
+    </header>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Час початку</th>
+                    <th>Використано коштів</th>
+                    <th>Тип операції</th>
+                    <th>Баланс до операції</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for trans in operation_details %}
+                <tr>
+                    <td>{{ trans.Time_started }}</td>
+                    <td>{{ trans.Money_Used }}</td>
+                    <td>{{ trans.Operation_Type }}</td>
+                    <td>{{ trans.Balance_Before_Operation }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <footer>
+        © 2024 Ваш Банк. Усі права захищені.
+    </footer>
+</body>
+</html>

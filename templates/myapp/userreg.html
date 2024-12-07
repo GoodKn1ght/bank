@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація</title>
+    <!-- Підключення Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
+        }
+        .form-container {
+            max-width: 500px;
+            margin: auto;
+        }
+        .form-heading {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Заголовок -->
+    <header class="form-heading">
+        <h1>Реєстрація</h1>
+    </header>
+
+    <!-- Форма реєстрації -->
+    <div class="form-container">
+        <div class="card p-4 shadow-lg">
+            <form method="post" action="{% url 'insertuser' %}">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="tuid" class="form-label">ID користувача:</label>
+                    <input type="text" id="tuid" name="tuid" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="tuname" class="form-label">Ім'я:</label>
+                    <input type="text" id="tuname" name="tuname" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="tuemail" class="form-label">Email:</label>
+                    <input type="email" id="tuemail" name="tuemail" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="tucontact" class="form-label">Контакт:</label>
+                    <input type="text" id="tucontact" name="tucontact" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="tudoc" class="form-label">Документ:</label>
+                    <input type="text" id="tudoc" name="tudoc" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="tupass" class="form-label">Пароль:</label>
+                    <input type="password" id="tupass" name="tupass" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="tums" class="form-label">Прізвище матері:</label>
+                    <input type="text" id="tums" name="tums" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Зареєструватись</button>
+            </form>
+        </div>
+        <div class="text-center mt-3">
+            <button onclick="location.href='{% url 'userlog' %}'" class="btn btn-secondary">Увійти</button>
+        </div>
+    </div>
+
+    <!-- Підключення Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

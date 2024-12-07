@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Виписка користувача</title>
+    <!-- Підключення Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Заголовок сторінки -->
+    <div class="container my-5">
+        <div class="text-center">
+            <h1 class="display-4">Виписка по рахунку</h1>
+            <p class="lead">Перегляньте останні транзакції</p>
+        </div>
+    </div>
+
+    <!-- Таблиця з операціями -->
+    <div class="container">
+        <div class="table-responsive">
+            <table class="table table-hover table-bordered text-center align-middle">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Дата та час</th>
+                        <th>Сума операції (грн)</th>
+                        <th>Тип операції</th>
+                        <th>Баланс до операції (грн)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if operation_details %}
+                        {% for trans in operation_details %}
+                        <tr>
+                            <td>{{ trans.Time_Completed }}</td>
+                            <td>{{ trans.Money_Used }}</td>
+                            <td>
+                                {% if trans.Operation_Type == 'w' %}
+                                    Зняття коштів
+                                {% elif trans.Operation_Type == 'a' %}
+                                    Додавання коштів
+                                {% else %}
+                                    Інша операція
+                                {% endif %}
+                            </td>
+                            <td>{{ trans.Balance_Before_Operation }}</td>
+                        </tr>
+                        {% endfor %}
+                    {% else %}
+                        <tr>
+                            <td colspan="4" class="text-muted">Дані про операції відсутні</td>
+                        </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Кнопка повернення -->
+    <div class="container text-center my-4">
+        <button class="btn btn-primary" onclick="location.href='{% url 'user_profile' %}'">
+            Повернутись до профілю
+        </button>
+    </div>
+
+    <!-- Підключення Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

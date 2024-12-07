@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bokeh Plot</title>
+    <style>
+      html, body {
+        box-sizing: border-box;
+        display: flow-root;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        Bokeh.set_log_level("info");
+    </script>
+  </head>
+  <body>
+    <div id="f19b5d3f-11fa-4c19-a01a-5dc3005d7fda" data-root-id="p1232" style="display: contents;"></div>
+  
+    <script type="application/json" id="defe44ec-19d9-40e7-9456-320385ce86a6">
+      {"bd95f55f-2ab4-46b9-a46f-7570d30a064c":{"version":"3.6.0","title":"Bokeh Application","roots":[{"type":"object","name":"Figure","id":"p1232","attributes":{"width":15000,"height":500,"x_range":{"type":"object","name":"FactorRange","id":"p1242","attributes":{"factors":["Office A","Office B","Office C","Office D","Office E","Office F","Office G","Office H","Office I","Office J","Office K","Office L","Office M","Office N","Office O","Office P","Office Q","Office R","Office S","Office T","Office U","Office V","Office W","Office X","Office Y","Office Z","Office AA","Office AB","Office AC","Office AD","Office AE","Office AF","Office AG","Office AH","Office AI","Office AJ","Office AK","Office AL","Office AM","Office AN","Office AO","Office AP","Office AQ","Office AR","Office AS","Office AT","Office AU","Office AV","Office AW","Office AX","Office AY","Office AZ","Office BA","Office BB","Office BC","Office BD","Office BE","Office BF","Office BG","Office BH","Office BI","Office BJ","Office BK","Office BL","Office BM","Office BN","Office BO","Office BP","Office BQ","Office BR","Office BS","Office BT","Office BU","Office BV","Office BW","Office BX","Office BY","Office BZ","Office CA","Office CB","Office CC","Office CD","Office CE","Office CF","Office CG","Office CH","Office CI","Office CJ","Office CK","Office CL","Office CM","Office CN","Office CO","Office CP","Office CQ","Office CR","Office CS","Office CT","Office CU","Office CV","Office CW","Office CX","Office CY","Office CZ","Office DA","Office DB","Office DC","Office DD","Office DE","Office DF","Office DG","Office DH","Office DI","Office DJ","Office DK","Office DL","Office DM","Office DN","Office DO","Office DP","Office DQ","Office DR","Office DS","Office DT","Office DU","Office DV","Office DW","Office DX","Office DY","Office DZ","Office EA","Office EB","Office EC","Office ED","Office EE","Office EF","Office EG","Office EH","Office EI","Office EJ","Office EK","Office EL","Office EM","Office EN","Office EO","Office EP","Office EQ","Office ER","Office ES","Office ET"]}},"y_range":{"type":"object","name":"DataRange1d","id":"p1234"},"x_scale":{"type":"object","name":"CategoricalScale","id":"p1243"},"y_scale":{"type":"object","name":"LinearScale","id":"p1244"},"title":{"type":"object","name":"Title","id":"p1235","attributes":{"text":"Employee Count per Office"}},"renderers":[{"type":"object","name":"GlyphRenderer","id":"p1274","attributes":{"data_source":{"type":"object","name":"ColumnDataSource","id":"p1229","attributes":{"selected":{"type":"object","name":"Selection","id":"p1230","attributes":{"indices":[],"line_indices":[]}},"selection_policy":{"type":"object","name":"UnionRenderers","id":"p1231"},"data":{"type":"map","entries":[["index",{"type":"ndarray","array":{"type":"bytes","data":"AAAAAAEAAAACAAAAAwAAAAQAAAAFAAAABgAAAAcAAAAIAAAACQAAAAoAAAALAAAADAAAAA0AAAAOAAAADwAAABAAAAARAAAAEgAAABMAAAAUAAAAFQAAABYAAAAXAAAAGAAAABkAAAAaAAAAGwAAABwAAAAdAAAAHgAAAB8AAAAgAAAAIQAAACIAAAAjAAAAJAAAACUAAAAmAAAAJwAAACgAAAApAAAAKgAAACsAAAAsAAAALQAAAC4AAAAvAAAAMAAAADEAAAAyAAAAMwAAADQAAAA1AAAANgAAADcAAAA4AAAAOQAAADoAAAA7AAAAPAAAAD0AAAA+AAAAPwAAAEAAAABBAAAAQgAAAEMAAABEAAAARQAAAEYAAABHAAAASAAAAEkAAABKAAAASwAAAEwAAABNAAAATgAAAE8AAABQAAAAUQAAAFIAAABTAAAAVAAAAFUAAABWAAAAVwAAAFgAAABZAAAAWgAAAFsAAABcAAAAXQAAAF4AAABfAAAAYAAAAGEAAABiAAAAYwAAAGQAAABlAAAAZgAAAGcAAABoAAAAaQAAAGoAAABrAAAAbAAAAG0AAABuAAAAbwAAAHAAAABxAAAAcgAAAHMAAAB0AAAAdQAAAHYAAAB3AAAAeAAAAHkAAAB6AAAAewAAAHwAAAB9AAAAfgAAAH8AAACAAAAAgQAAAIIAAACDAAAAhAAAAIUAAACGAAAAhwAAAIgAAACJAAAAigAAAIsAAACMAAAAjQAAAI4AAACPAAAAkAAAAJEAAACSAAAAkwAAAJQAAACVAAAA"},"shape":[150],"dtype":"int32","order":"little"}],["Office",{"type":"ndarray","array":["Office A","Office B","Office C","Office D","Office E","Office F","Office G","Office H","Office I","Office J","Office K","Office L","Office M","Office N","Office O","Office P","Office Q","Office R","Office S","Office T","Office U","Office V","Office W","Office X","Office Y","Office Z","Office AA","Office AB","Office AC","Office AD","Office AE","Office AF","Office AG","Office AH","Office AI","Office AJ","Office AK","Office AL","Office AM","Office AN","Office AO","Office AP","Office AQ","Office AR","Office AS","Office AT","Office AU","Office AV","Office AW","Office AX","Office AY","Office AZ","Office BA","Office BB","Office BC","Office BD","Office BE","Office BF","Office BG","Office BH","Office BI","Office BJ","Office BK","Office BL","Office BM","Office BN","Office BO","Office BP","Office BQ","Office BR","Office BS","Office BT","Office BU","Office BV","Office BW","Office BX","Office BY","Office BZ","Office CA","Office CB","Office CC","Office CD","Office CE","Office CF","Office CG","Office CH","Office CI","Office CJ","Office CK","Office CL","Office CM","Office CN","Office CO","Office CP","Office CQ","Office CR","Office CS","Office CT","Office CU","Office CV","Office CW","Office CX","Office CY","Office CZ","Office DA","Office DB","Office DC","Office DD","Office DE","Office DF","Office DG","Office DH","Office DI","Office DJ","Office DK","Office DL","Office DM","Office DN","Office DO","Office DP","Office DQ","Office DR","Office DS","Office DT","Office DU","Office DV","Office DW","Office DX","Office DY","Office DZ","Office EA","Office EB","Office EC","Office ED","Office EE","Office EF","Office EG","Office EH","Office EI","Office EJ","Office EK","Office EL","Office EM","Office EN","Office EO","Office EP","Office EQ","Office ER","Office ES","Office ET"],"shape":[150],"dtype":"object","order":"little"}],["Employee_Count",{"type":"ndarray","array":{"type":"bytes","data":"AQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAAFAAAA"},"shape":[150],"dtype":"int32","order":"little"}]]}}},"view":{"type":"object","name":"CDSView","id":"p1275","attributes":{"filter":{"type":"object","name":"AllIndices","id":"p1276"}}},"glyph":{"type":"object","name":"VBar","id":"p1271","attributes":{"x":{"type":"field","field":"Office"},"width":{"type":"value","value":0.5},"top":{"type":"field","field":"Employee_Count"},"line_color":{"type":"value","value":"blue"},"line_alpha":{"type":"value","value":0.7},"fill_color":{"type":"value","value":"blue"},"fill_alpha":{"type":"value","value":0.7},"hatch_color":{"type":"value","value":"blue"},"hatch_alpha":{"type":"value","value":0.7}}},"nonselection_glyph":{"type":"object","name":"VBar","id":"p1272","attributes":{"x":{"type":"field","field":"Office"},"width":{"type":"value","value":0.5},"top":{"type":"field","field":"Employee_Count"},"line_color":{"type":"value","value":"blue"},"line_alpha":{"type":"value","value":0.1},"fill_color":{"type":"value","value":"blue"},"fill_alpha":{"type":"value","value":0.1},"hatch_color":{"type":"value","value":"blue"},"hatch_alpha":{"type":"value","value":0.1}}},"muted_glyph":{"type":"object","name":"VBar","id":"p1273","attributes":{"x":{"type":"field","field":"Office"},"width":{"type":"value","value":0.5},"top":{"type":"field","field":"Employee_Count"},"line_color":{"type":"value","value":"blue"},"line_alpha":{"type":"value","value":0.2},"fill_color":{"type":"value","value":"blue"},"fill_alpha":{"type":"value","value":0.2},"hatch_color":{"type":"value","value":"blue"},"hatch_alpha":{"type":"value","value":0.2}}}}}],"toolbar":{"type":"object","name":"Toolbar","id":"p1241","attributes":{"tools":[{"type":"object","name":"PanTool","id":"p1255"},{"type":"object","name":"WheelZoomTool","id":"p1256","attributes":{"renderers":"auto"}},{"type":"object","name":"BoxZoomTool","id":"p1257","attributes":{"overlay":{"type":"object","name":"BoxAnnotation","id":"p1258","attributes":{"syncable":false,"line_color":"black","line_alpha":1.0,"line_width":2,"line_dash":[4,4],"fill_color":"lightgrey","fill_alpha":0.5,"level":"overlay","visible":false,"left":{"type":"number","value":"nan"},"right":{"type":"number","value":"nan"},"top":{"type":"number","value":"nan"},"bottom":{"type":"number","value":"nan"},"left_units":"canvas","right_units":"canvas","top_units":"canvas","bottom_units":"canvas","handles":{"type":"object","name":"BoxInteractionHandles","id":"p1264","attributes":{"all":{"type":"object","name":"AreaVisuals","id":"p1263","attributes":{"fill_color":"white","hover_fill_color":"lightgray"}}}}}}}},{"type":"object","name":"SaveTool","id":"p1265"},{"type":"object","name":"ResetTool","id":"p1266"},{"type":"object","name":"HelpTool","id":"p1267"}]}},"left":[{"type":"object","name":"LinearAxis","id":"p1250","attributes":{"ticker":{"type":"object","name":"BasicTicker","id":"p1251","attributes":{"mantissas":[1,2,5]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p1252"},"axis_label":"Employee Count","major_label_policy":{"type":"object","name":"AllLabels","id":"p1253"}}}],"below":[{"type":"object","name":"CategoricalAxis","id":"p1245","attributes":{"ticker":{"type":"object","name":"CategoricalTicker","id":"p1246"},"formatter":{"type":"object","name":"CategoricalTickFormatter","id":"p1247"},"axis_label":"Office","major_label_orientation":1.2,"major_label_policy":{"type":"object","name":"AllLabels","id":"p1248"}}}],"center":[{"type":"object","name":"Grid","id":"p1249","attributes":{"axis":{"id":"p1245"},"grid_line_color":null}},{"type":"object","name":"Grid","id":"p1254","attributes":{"dimension":1,"axis":{"id":"p1250"}}}]}}]}}
+    </script>
+    <script type="text/javascript">
+      (function() {
+        const fn = function() {
+          Bokeh.safely(function() {
+            (function(root) {
+              function embed_document(root) {
+              const docs_json = document.getElementById('defe44ec-19d9-40e7-9456-320385ce86a6').textContent;
+              const render_items = [{"docid":"bd95f55f-2ab4-46b9-a46f-7570d30a064c","roots":{"p1232":"f19b5d3f-11fa-4c19-a01a-5dc3005d7fda"},"root_ids":["p1232"]}];
+              root.Bokeh.embed.embed_items(docs_json, render_items);
+              }
+              if (root.Bokeh !== undefined) {
+                embed_document(root);
+              } else {
+                let attempts = 0;
+                const timer = setInterval(function(root) {
+                  if (root.Bokeh !== undefined) {
+                    clearInterval(timer);
+                    embed_document(root);
+                  } else {
+                    attempts++;
+                    if (attempts > 100) {
+                      clearInterval(timer);
+                      console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                    }
+                  }
+                }, 10, root)
+              }
+            })(window);
+          });
+        };
+        if (document.readyState != "loading") fn();
+        else document.addEventListener("DOMContentLoaded", fn);
+      })();
+    </script>
+  </body>
+</html>
